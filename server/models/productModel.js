@@ -1,0 +1,1 @@
+//we will have some properties like : name, image, description, price, qtyInStock
