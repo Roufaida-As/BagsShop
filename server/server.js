@@ -1,17 +1,25 @@
 const express = require('express');
 const app = express();
 const dotenv = require("dotenv");
+const mongoose = require('mongoose')
+const productsRoute = require('./routes/productRouter')
+const dataSender = require('./routes/dataSender')
+
 dotenv.config({ path: './config.env' })
-port=process.env.port
+port = process.env.port
 
-//add request body to request object(middleware)
-app.use(express.json())
+mongoose.connect(process.env.CONN_STR).then((conn) => {
+  console.log('DB connected successfully')
+}).catch((error) => {
+  console.log(error)
+})
+
+//this will create all products in the same time rather than create one by one
+app.use("/api/send", dataSender);
+
+app.use('/api/products', productsRoute)
 
 
-//just a test
-app.get('/', (req, res) => {
-  res.send('Hello from the backend!');
-});
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
