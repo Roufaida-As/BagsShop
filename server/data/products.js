@@ -1,5 +1,4 @@
 const products = [
-  //the images are empty for now and the bags's names and descriptions are random
   {
     name: "FRECI bag",
     description:
