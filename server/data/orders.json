@@ -1,0 +1,108 @@
+[
+    {
+      "user": "66dda45b2bf925561dee2a68",
+      "orderItems": [
+        {
+          "name": "FRECI bag",
+          "qty": 1,
+          "image": "../img/bag1.png",
+          "price": 4500.0,
+          "product": "64f0b0d2548b4b1499a749ab"
+        }
+      ],
+      "userAdress": {
+        "city": "Algiers",
+        "postalCode": "16000",
+        "country": "Algeria"
+      },
+      "totalPrice": 4500.0,
+      "isPaid": true,
+      "paidAt": "2024-09-05T15:30:00Z"
+    },
+    {
+      "user": "66dda45b2bf925561dee2a6c",
+      "orderItems": [
+        {
+          "name": "Summer Beach bag",
+          "qty": 2,
+          "image": "../img/bag4.png",
+          "price": 4000.0,
+          "product": "64f0b0d2548b4b1499a749af"
+        }
+      ],
+      "userAdress": {
+        "city": "Oran",
+        "postalCode": "31000",
+        "country": "Algeria"
+      },
+      "totalPrice": 8000.0,
+      "isPaid": false
+    },
+    {
+      "user": "66dda45b2bf925561dee2a6a",
+      "orderItems": [
+        {
+          "name": "Leather backpack",
+          "qty": 1,
+          "image": "../img/bag3.png",
+          "price": 3500.0,
+          "product": "64f0b0d2548b4b1499a749ad"
+        },
+        {
+          "name": "BELEY bag",
+          "qty": 1,
+          "image": "../img/bag2.png",
+          "price": 3000.0,
+          "product": "64f0b0d2548b4b1499a749ac"
+        }
+      ],
+      "userAdress": {
+        "city": "Constantine",
+        "postalCode": "25000",
+        "country": "Algeria"
+      },
+      "totalPrice": 6500.0,
+      "isPaid": true,
+      "paidAt": "2024-09-06T10:00:00Z"
+    },
+    {
+      "user": "66dda45b2bf925561dee2a6b",
+      "orderItems": [
+        {
+          "name": "Canvas Tote Handbag",
+          "qty": 3,
+          "image": "../img/bag6.png",
+          "price": 3000.0,
+          "product": "64f0b0d2548b4b1499a749ae"
+        }
+      ],
+      "userAdress": {
+        "city": "Annaba",
+        "postalCode": "23000",
+        "country": "Algeria"
+      },
+      "totalPrice": 9000.0,
+      "isPaid": false
+    },
+    {
+      "user": "66dda45b2bf925561dee2a69",
+      "orderItems": [
+        {
+          "name": "PU Leather handbag",
+          "qty": 1,
+          "image": "../img/bag5.png",
+          "price": 2500.0,
+          "product": "64f0b0d2548b4b1499a749ag"
+        }
+      ],
+      "userAdress": {
+        "city": "Tlemcen",
+        "postalCode": "13000",
+        "country": "Algeria"
+      },
+      "totalPrice": 2500.0,
+      "isPaid": true,
+      "paidAt": "2024-09-08T14:00:00Z"
+    }
+  ]
+  
