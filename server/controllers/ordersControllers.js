@@ -1,9 +1,10 @@
-const OrderModel = require("./../models/orderModel");
 const asyncHandler = require("express-async-handler");
+const orderModel = require("./../models/orderModel");
 
-// Get all orders
+
+// Get all orders for an authorized user
 exports.getAllOrders = asyncHandler(async (req, res) => {
-  const orders = await OrderModel.find({});
+  const orders = await orderModel.find({ user: req.user._id }).sort({ _id: -1 });
   res.status(200).json({
     status: "success",
     length: orders.length,
@@ -13,9 +14,9 @@ exports.getAllOrders = asyncHandler(async (req, res) => {
   });
 });
 
-// Get a single order by ID
+// Get a single order by ID (order details) for an authorized user
 exports.getOrder = asyncHandler(async (req, res) => {
-  const order = await OrderModel.findById(req.params.id);
+  const order = await orderModel.findById(req.params.id);
   if (!order) {
     return res.status(400).json({
       status: "fail",
@@ -30,9 +31,9 @@ exports.getOrder = asyncHandler(async (req, res) => {
   });
 });
 
-// Update an order by ID
+// Update an order by ID for an authorized user
 exports.updateOrder = asyncHandler(async (req, res) => {
-  const order = await OrderModel.findByIdAndUpdate(req.params.id, req.body, {
+  const order = await orderModel.findByIdAndUpdate(req.params.id, req.body, {
     new: true, // Return the updated document
     runValidators: true, // Validate the updated document against the schema
   });
@@ -50,9 +51,51 @@ exports.updateOrder = asyncHandler(async (req, res) => {
   });
 });
 
-// Delete an order by ID
+
+//order payment
+//update order status for payment for an authorized user
+
+exports.updatePaymentStatus = asyncHandler(async (req, res) => {
+  const order = await orderModel.findById(req.params.id);
+  if (order) {
+
+    order.isPaid = true;
+    order.paidAt = Date.now();
+    const updatedOrder = order.save();
+
+    res.status(200).json(updatedOrder);
+  }
+  else {
+    res.status(404);
+    throw new Error("Order Not Found");
+  }
+})
+
+
+
+//create an order for an authorized user
+exports.createOrder = asyncHandler(async (req, res) => {
+  const { orderItems, userAdress, totalPrice } = req.body
+  //case of no orders
+  if (orderItems && orderItems.length === 0) {
+    res.status(400).json({
+      status: "fail",
+      message: "you have 0 orders"
+    })
+
+  }
+  else {
+    const createdOrder = await orderModel.create({
+      orderItems, userAdress, totalPrice, user: req.user._id
+    })
+    res.status(201).json(createdOrder)
+
+  }
+})
+
+// Delete an order by ID for an authorized user
 exports.deleteOrder = asyncHandler(async (req, res) => {
-  const order = await OrderModel.findByIdAndDelete(req.params.id);
+  const order = await orderModel.findByIdAndDelete(req.params.id);
   if (!order) {
     return res.status(400).json({
       status: "fail",

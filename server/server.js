@@ -3,10 +3,17 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require('mongoose')
 const productsRoute = require('./routes/productRouter')
+const ordersRoute = require('./routes/orderRouter')
+const userRoute = require('./routes/userRouter')
 const dataSender = require('./routes/dataSender')
+
 
 dotenv.config({ path: './config.env' })
 port = process.env.port
+
+//add request body to request object(middleware)
+app.use(express.json())
+
 
 mongoose.connect(process.env.CONN_STR).then((conn) => {
   console.log('DB connected successfully')
@@ -18,6 +25,8 @@ mongoose.connect(process.env.CONN_STR).then((conn) => {
 app.use("/api/send", dataSender);
 
 app.use('/api/products', productsRoute)
+app.use('/api/orders', ordersRoute)
+app.use('/api/users', userRoute)
 
 
 

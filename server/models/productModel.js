@@ -9,6 +9,6 @@ const productSchema = new mongoose.Schema({
   qtyInStock: { type: Number, required: true, default: 0 },
 });
 
-const ProductModel = mongoose.model("Product", productSchema);
+const ProductModel = mongoose.model('Product', productSchema);
 
 module.exports = ProductModel;

@@ -1,15 +1,14 @@
 const express = require("express");
 const userRoute = express.Router();
 const usersController = require("./../controllers/usersController");
+const protect = require("./../protectingRoutes");
 
-// For all users
-userRoute.route("/").get(usersController.getAllUsers);
 
-// For each user /users/:id
-userRoute
-  .route("/:id")
-  .get(usersController.getUser)
-  .put(usersController.updateUser)
-  .delete(usersController.deleteUser);
+userRoute.route('/signup').post(usersController.signup)
+userRoute.route('/login').post(usersController.login)
+userRoute.route('/profile')
+    .get(protect, usersController.getUserProfile)
+    .patch(protect, usersController.updateUserProfile)
+
 
 module.exports = userRoute;
