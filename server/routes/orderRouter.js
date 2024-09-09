@@ -1,7 +1,7 @@
 const express = require("express");
 const orderRoute = express.Router();
 const protect = require("./../protectingRoutes");
-const ordersController = require("./../controllers/ordersControllers");
+const ordersController = require("../controllers/ordersController");
 
 // For all orders
 orderRoute
