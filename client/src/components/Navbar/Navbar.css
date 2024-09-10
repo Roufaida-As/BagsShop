@@ -1,0 +1,48 @@
+.Navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 10%; */
+    position: fixed;
+    padding-top: 16px;
+    height: 10%;
+    background : white;
+    width: 100%;
+    z-index: 1;
+}
+.Navbar_logo p {
+    width: 107px;
+    height: 27px;
+    top: 22.06px;
+    left: 20.14px;
+    gap: 0px;
+    opacity: 0px;
+    font-size: 21.97px;
+    font-weight: 500;
+    line-height: 26.79px;
+    font-family: Montserrat-Medium;
+
+
+}
+.nav_menu{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items:center;
+}
+.nav_menu li {
+    font-family: Montserrat-Medium;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.78px;
+    text-align: left;
+    width: 95.57px;
+    height: 38.45px;
+    left: 320.48px;
+    gap: 0px;
+    opacity: 0px;
+
+
+}
