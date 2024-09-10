@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require('mongoose')
+const cors = require("cors")
+const path = require('path');
 const productsRoute = require('./routes/productRouter')
 const ordersRoute = require('./routes/orderRouter')
 const userRoute = require('./routes/userRouter')
@@ -13,6 +15,14 @@ port = process.env.port
 
 //add request body to request object(middleware)
 app.use(express.json())
+
+// to allow the frontend to communicate with backend.
+app.use(cors())
+
+
+// Serve static files from the "img" folder
+//in order to access those images from the frontend
+app.use('/img', express.static(path.join(__dirname, 'img')));
 
 
 mongoose.connect(process.env.CONN_STR).then((conn) => {
