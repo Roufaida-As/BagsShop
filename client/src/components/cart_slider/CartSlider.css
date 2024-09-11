@@ -1,0 +1,126 @@
+.cart-slider {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -4px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cart-slider.open {
+    right: 0;
+    /* Slide in */
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-close {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: Montserrat-Medium;
+}
+
+.cart-header h2 {
+    font-family: Montserrat-Medium;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.cart-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 60vh;
+    /* Set the height limit for the items container */
+    padding-right: 10px;
+}
+
+.cart-item {
+    display: flex;
+    font-family: Montserrat-Medium;
+    margin-bottom: 22px;
+}
+
+.cart-item-left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.cart-item-right {
+    flex-grow: 1;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 18px;
+}
+
+.cart-item-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qty-container input {
+    width: 50px;
+    margin-left: 5px;
+}
+
+.qty-container {
+    padding: 10px;
+}
+
+.cart-footer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1px solid #999797;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px; /* Add margin to ensure it's not being overlapped */ 
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   
+    font-family: Montserrat-Medium;
+}
+
+.checkout-btn {
+    background-color: #DCB780;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+    font-size: 16px;
+    font-family: Montserrat-Medium;
+}
+
+.continue-shopping {
+    font-family: Montserrat-Medium;
+    color: #555;
+    cursor: pointer;
+}

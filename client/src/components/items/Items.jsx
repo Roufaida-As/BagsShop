@@ -20,7 +20,7 @@ const Items = () => {
 
     return (
         <div>
-            <h5>COLLECTIONS</h5>
+            <h5 id="collections">COLLECTIONS</h5>
             <h3>All Products</h3>
             <div className="allproducts">
                 <h6>{products.length} products</h6>
