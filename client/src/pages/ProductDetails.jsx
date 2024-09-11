@@ -27,12 +27,12 @@ const ProductDetails = () => {
                     <ProductImage image={product.image} />
                 </div>
                 <div className="product-right">
-                    <ProductInfo 
-                        title={product.name} 
-                        price={product.price} 
+                    <ProductInfo
+                        title={product.name}
+                        price={product.price}
                         description={product.description}
                         //to try the button
-                        onAddToCart={() => console.log(`Added ${product.name} to cart!`)} 
+                        onAddToCart={() => console.log(`Added ${product.name} to cart!`)}
                     />
                 </div>
             </div>

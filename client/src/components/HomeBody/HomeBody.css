@@ -1,81 +1,72 @@
-.Home_body{
-
+.Home_body {
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 490px;
     display: flex;
     padding-top: 100px;
-    background: #FFFCFC;
-
-  
-   
-}
-.Home-left img {
+    background: #fffcfc;
+  }
+  .Home-left img {
+    position: relative;
     width: 667.89px;
-    height: 781.03px;
-    top: 88.31px;
-    left: 686.36px;
-    gap: 0px;
-    opacity: 0px;
-
-
-}
-.Home-right{
+    padding: 15px;
+  }
+  .Home-right {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 490px;
     position: relative;
-    
-}
-.Home-right h1{ 
+  }
+  .Home-right h1 {
     width: 465px;
-    height: 149px;
     gap: 0px;
-    border: 3.14px 0px 0px 0px;
+    border: 3.14px;
     opacity: 0px;
     font-family: Literata;
-    font-size: 100px;
-    font-weight: 1000;
-    line-height: 118.5px;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 90.5px;
     text-align: left;
     font-family: Literata-Regular;
     letter-spacing: 2px;
-
-}
-.Home-right p {
+    position: relative;
+    bottom: 40px;
+  }
+  .Home-right p {
     font-family: Montserrat;
-    font-size: 22.34px;
+    font-size: 20.34px;
     font-weight: 400;
     line-height: 27.23px;
     text-align: justified;
     color: #555555;
-    width: 566px;
+    width: 90%;
     height: 108px;
     gap: 0px;
     opacity: 0px;
-    left: 60px;
     position: relative;
-    top: 30px;
-}
-.Home-right button {
-   
-    
-    background: #DCB780;
+    bottom: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Home-right button {
+    background: #dcb780;
     font-family: Montserrat;
     font-size: 23.07px;
     font-weight: 500;
     line-height: 28.12px;
-    text-align: left;
-    width:  175.76px;
-    height:74.7px;
-    gap: 10.98px;
+    text-align: center;
+    width: 175.76px;
+    height: 74.7px;
     opacity: 0px;
     border: none;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: center;
-    top: 70%;
-    left: 60%;
-    transform: translate(-50%,-50%);
-    position: absolute;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-
-}
+    bottom: 40px;
+  }

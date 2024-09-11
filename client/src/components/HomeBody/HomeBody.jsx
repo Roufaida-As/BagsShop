@@ -1,6 +1,6 @@
 import React from "react";
 import './HomeBody.css'
-import homeright from "../Asserts/homeright.png"
+import homeright from "../Asserts/homeright.jpeg"
 
 const HomeBody = () => {
     return (
@@ -11,8 +11,6 @@ const HomeBody = () => {
             <div className="Home-right">
                 
                 <h1>Elegance, Quality,You</h1>
-                
-           
                  <p>Explore our collection of high-quality, elegantly 
                     crafted bags with a feminine touch. From chic 
                     handbags to versatile totes, each piece is designed

@@ -1,77 +1,52 @@
-.carts{
-    /* width: 428px; */
-    width: 100%;
+.carts {
+    width: 90%;
     height: 90%;
-    top: -0.19px;
-    left: 0px;
-    gap: 0px;
-    opacity: 0px;
     box-shadow: 1.1px 4.39px 27.46px 0px #00000026;
     background: white;
     position: relative;
-
-
 }
 
-
-.cart{
-    /* width: 428px; */
-    width: 90%;
-    height: 80%;
-    /* height: 716px; */
-    top: -0.19px;
-    left: 0px;
-    gap: 0px;
-    opacity: 0px;
+.cart {
+    height: 436px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-arround;
     z-index: 1;
     padding: 20px;
-
-
 }
+
 .cart p {
-   
-    height: 35px;
-    gap: 0px;
-    opacity: 0px;
+    /* height: 35px; */
+    width: 300px;
     font-family: Montserrat-Medium;
-    font-size: 25.56px;
+    font-size: 20.56px;
     font-weight: 500;
-    line-height: 34.82px;
-    text-align: left;
-    color:  black;
-    
+    line-height: 26.82px;
+    text-align: center;
+    color: black;
 }
-.cart h6{
+
+.cart span {
     font-family: Montserrat;
-    font-size: 28.56px;
+    font-size: 23.56px;
     font-weight: 400;
-    line-height: 34.82px;
-    text-align: left;
-    color: #1E1E1E;
+    line-height: 25.82px;
+    text-align: center;
+    color: #1e1e1e;
     position: relative;
-    transform: translateY(-50%);
-    bottom: 40px;
-    height: 35px;
+    bottom: 10px;
     gap: 0px;
     opacity: 0px;
-
 }
-.btn{
-    
-height: 58.36px;
 
-
-
+.btn {
+    height: 55.36px;
     width: 100%;
-    /* height: 20%; */
-    padding: 13.18px 112.05px 13.18px 112.05px;
+    padding: 8.18px;
     gap: 10.98px;
     opacity: 0px;
-    background: #DCB780;
+    background: #dcb780;
     cursor: pointer;
     gap: 0px;
     opacity: 0px;
@@ -79,22 +54,22 @@ height: 58.36px;
     font-size: 21.52px;
     font-weight: 400;
     line-height: 32.28px;
-    text-align: left;
-    color:  #FFFFFF;
+    color: #ffffff;
     text-align: center;
     position: relative;
-    bottom: 90px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
- 
 }
 
-.cart img{
-    width: 100%;
-    height:477px;
+.cart img {
+    height: 246px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .carts:hover {
     transform: scale(1.02);
 }
