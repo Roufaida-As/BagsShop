@@ -25,7 +25,7 @@ const Items = () => {
             <h4>{products.length} products</h4>
             <div className="items">
                 {products.map((item,i) => {
-                        return < ProductsCart key={i} image={item.image} id={item._id} name={item.name} price={item.price}/>
+                        return < ProductsCart key={i} image={item.image} id={item._id} name={item.name} price={`${item.price} DA`}/>
                 }) }
 
             </div>

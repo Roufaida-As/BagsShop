@@ -1,0 +1,37 @@
+.product-details-container {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+
+.product-row {
+    box-shadow: 2px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 1200px;
+    gap: 2px;
+    width: 100%;
+  
+}
+
+.product-left {
+    flex: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.product-right {
+    flex: 1.2;
+    background-color: #D9D1C5;
+    margin:  30px;
+    padding: 40px;
+    display: flex;
+    width: 120%;
+    flex-direction: column;
+    justify-content: center;
+}
