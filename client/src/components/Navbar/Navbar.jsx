@@ -61,8 +61,7 @@ const Navbar = () => {
                 <li><Link style={{ textDecoration: 'none' }} to='/'>Home</Link></li>
                 <li>About</li>
                 <li>Contact</li>
-                <li>Log in</li>
-
+                <li><Link style={{textDecoration: 'none'}} to='/login'>Log in</Link></li>
             </ul>
             <div className="nav_cart" onClick={openCart}>
                 <img src={cart} alt="Cart" />

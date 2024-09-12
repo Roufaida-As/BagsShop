@@ -1,0 +1,134 @@
+.Register_body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: #fffcfc;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    position: relative;
+  }
+  
+  .container {
+    width: 70%;
+    height: 70%;
+    background: #d9d1c5;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 90.5px;
+    text-align: center;
+    font-family: Literata-Regular;
+    letter-spacing: 2px;
+    position: relative;
+    bottom: 30px;
+  }
+  
+  .email-input {
+    background-color: #deae68;
+    position: relative;
+    padding: 5px 0px;
+    width: 100%;
+    font-size: 15px;
+    color: black;
+    border: none;
+  }
+  .pswd-input {
+    background-color: #deae68;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    color: black;
+    border: none;
+  }
+  p {
+    position: relative;
+    left: 52%;
+    bottom: 45px;
+  }
+  .input-icon1,
+  .input-icon2 {
+    position: relative;
+    right: 25px;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  .username-box {
+    position: absolute;
+    width: 310px;
+    height: 20px;
+    background-color: #deae68;
+    opacity: 50%;
+    position: absolute;
+    right: 100px;
+    top: 20%;
+    padding: 15px 15px 15px 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    display: flex;
+    align-items: center;
+  }
+  .email-box {
+    position: absolute;
+    width: 310px;
+    height: 20px;
+    background-color: #deae68;
+    opacity: 50%;
+    position: absolute;
+    right: 100px;
+    top: 40%;
+    padding: 15px 15px 15px 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    display: flex;
+    align-items: center;
+  }
+  .pswd-box {
+    position: absolute;
+    width: 310px;
+    height: 20px;
+    background-color: #deae68;
+    opacity: 50%;
+    position: absolute;
+    right: 100px;
+    top: 60%;
+    padding: 15px 15px 15px 50px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    display: flex;
+    align-items: center;
+  }
+  button {
+    width: 140px;
+    height: 45px;
+    font-size: 18px;
+    background-color: #dcb780;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    left: 28%;
+    top: 25%;
+  }
+  span {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 70.79px;
+    font-family: Montserrat-Medium;
+    position: relative;
+    left: 5%;
+    bottom: 5%;
+  }
