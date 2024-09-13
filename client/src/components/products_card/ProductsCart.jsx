@@ -9,7 +9,7 @@ const ProductsCart = ({ id, image, name, price }) => {
                 <div className="cart">
                     <img src={`http://localhost:3002${image}`} alt="" />
                     <p>{name}</p>
-                    <span>{price}</span>
+                    <p>{price}</p>
                     <button className="btn">Add to cart</button>
 
                 </div>

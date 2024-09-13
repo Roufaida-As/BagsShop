@@ -26,30 +26,35 @@ const LoginBody = () => {
         <div className="Login_body">
             <div className="container">
                 <h1>Login</h1>
-                <p>You do not have an account? <Link to='/register'>Register</Link></p>
-                <span>BagShop</span>
-                <div className="email-box">
-                    <img src={icon1} alt="email icon" className="input-icon1" />
-                    <input
-                        className="email-input"
-                        type="email"
-                        value={email}
-                        onChange={handleEmailChange}
-                        placeholder="Email"
-                        required
-                    />
-                </div>
+                <div className="row-content">
+                    <span>BagShop</span>
+                    <div className="inputs-col">
+                        <p>You do not have an account? <Link to='/register'>Register</Link></p>
 
-                <div className="pswd-box">
-                    <img src={icon2} alt="password icon" className="input-icon2" />
-                    <input
-                        className="pswd-input"
-                        type="password"
-                        value={password}
-                        onChange={handlePasswordChange}
-                        placeholder="Password"
-                        required
-                    />
+                        <div className="email-box">
+                            <img src={icon1} alt="email icon" className="input-icon1" />
+                            <input
+                                className="email-input"
+                                type="email"
+                                value={email}
+                                onChange={handleEmailChange}
+                                placeholder="Email"
+                                required
+                            />
+                        </div>
+
+                        <div className="pswd-box">
+                            <img src={icon2} alt="password icon" className="input-icon2" />
+                            <input
+                                className="pswd-input"
+                                type="password"
+                                value={password}
+                                onChange={handlePasswordChange}
+                                placeholder="Password"
+                                required
+                            />
+                        </div>
+                    </div>
                 </div>
                 <button>Login</button>
             </div>

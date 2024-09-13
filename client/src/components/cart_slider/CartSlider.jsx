@@ -24,7 +24,7 @@ const CartSlider = ({ cartItems, isOpen, closeCart, updateQty, removeItem }) => 
                             </div>
                             <div className="cart-item-actions">
                                 <div className="qty-container">
-                                    <span>Qty: </span>
+                                    <p>Qty: </p>
                                     <input
                                         type="number"
                                         min="1"
@@ -52,7 +52,7 @@ const CartSlider = ({ cartItems, isOpen, closeCart, updateQty, removeItem }) => 
                 </div>
                 <button className="checkout-btn">Checkout</button>
                 <p className="continue-shopping">
-                    Or <span style={{ color: '#DCB780' }}>Continue to Shopping</span>
+                    Or <span style={{ color: '#DCB780' }}>Continue Shopping</span>
                 </p>
             </div>
         </div>
