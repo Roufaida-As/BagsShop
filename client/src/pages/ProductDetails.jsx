@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ProductImage from '../components/product_details/productImage';
 import ProductInfo from '../components/product_details/productInfo';
 import './ProductDetails.css';
 import { useParams } from 'react-router-dom';
+import { CartContext } from './../components/cart_slider/CartContext';
 
 const ProductDetails = () => {
     const { id } = useParams(); // Getting the product ID from the URL
     const [product, setProduct] = useState(null);
+    const { addToCart } = useContext(CartContext);
 
     useEffect(() => {
         // Fetch product details using the ID
@@ -32,7 +34,7 @@ const ProductDetails = () => {
                         price={product.price}
                         description={product.description}
                         //to try the button
-                        onAddToCart={() => console.log(`Added ${product.name} to cart!`)}
+                        onAddToCart={() => addToCart(product)}
                     />
                 </div>
             </div>
