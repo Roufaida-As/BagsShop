@@ -2,12 +2,12 @@ import React from "react";
 import { useState } from 'react';
 import './Navbar.css'
 import cart from "../Asserts/cart.png"
-import { Link } from "react-router-dom";
 import CartSlider from "./../cart_slider/CartSlider";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const [isCartOpen, setIsCartOpen] = useState(false);
-  
+
     const openCart = () => setIsCartOpen(true);
     const closeCart = () => setIsCartOpen(false);
 
@@ -18,10 +18,51 @@ const Navbar = () => {
 
             </div>
             <ul className="nav_menu">
-                <li><Link style={{ textDecoration: 'none' }} to='/'>Home</Link></li>
-                <li>About</li>
-                <li>Contact</li>
-                <li><Link style={{textDecoration: 'none'}} to='/login'>Log in</Link></li>
+                <li>
+                    <NavLink
+                        exact
+                        to='/'
+                        className="nav-link"
+                        style={({ isActive }) => ({
+                            color: isActive ? "#DCB780" : "black",
+                        })}
+                    >
+                        Home
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to='/about'
+                        className="nav-link"
+                        style={({ isActive }) => ({
+                            color: isActive ? "#DCB780" : "black",
+                        })}
+                    >
+                        About
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to='/contact'
+                        className="nav-link"
+                        style={({ isActive }) => ({
+                            color: isActive ? "#DCB780" : "black",
+                        })}
+                    >
+                        Contact
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to='/login'
+                        className="nav-link"
+                        style={({ isActive }) => ({
+                            color: isActive ? "#DCB780" : "black",
+                        })}
+                    >
+                        Log in
+                    </NavLink>
+                </li>
             </ul>
             <div className="nav_cart" onClick={openCart}>
                 <img src={cart} alt="Cart" />

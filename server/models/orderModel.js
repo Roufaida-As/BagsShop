@@ -21,8 +21,9 @@ const orderSchema = new mongoose.Schema(
         orderItems: [orderItemSchema],
         userAdress: {
             city: { type: String, required: true },
-            postalCode: { type: String, required: true },
-            country: { type: String, required: true },
+            address: { type: String, required: true },
+            phoneNumber: { type: Number, required: true },
+            division: { type: String, required: true },
         },
         totalPrice: {
             type: Number,

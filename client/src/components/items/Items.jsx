@@ -2,21 +2,26 @@ import React from "react";
 import { useState, useEffect } from "react";
 import './Items.css';
 import ProductsCart from "../products_card/ProductsCart";
-// import data_product from "../Asserts/data"
+import axios from 'axios';
+import API_URL from '../../config'
 
 const Items = () => {
 
     const [products, setProducts] = useState([]);
 
-
     // Fetch products from the API
     useEffect(() => {
-        fetch("http://localhost:3002/api/products/")
-            .then(response => response.json())
-            .then(data => setProducts(data.data.products))
-            .catch(error => console.error("Error fetching products:", error));
-    }, []);
+        const fetchProducts = async () => {
+            try {
+                const response = await axios.get(`${API_URL}/api/products/`);
+                setProducts(response.data.data.products); // Assuming the products are in response.data.data.products
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        };
 
+        fetchProducts();
+    }, []);
 
     return (
         <div>

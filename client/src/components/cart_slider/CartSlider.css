@@ -35,10 +35,12 @@
     margin-right: 10px;
 }
 
-.cart-header h2 {
+.cart-header h1 {
     font-family: Montserrat-Medium;
     font-size: 25px;
     font-weight: 500;
+    margin-right: 10px;
+    color: #DCB780;
 }
 
 .cart-items {

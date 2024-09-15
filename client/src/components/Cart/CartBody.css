@@ -1,0 +1,167 @@
+.cart-body {
+    width: 100%;
+    height: 100vh;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-body h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: auto;
+    position: relative;
+}
+
+.products-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.info-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.cart-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 60vh;
+    padding-right: 10px;
+}
+
+.cart-item {
+    display: flex;
+    font-family: Montserrat-Medium;
+    margin-bottom: 22px;
+}
+
+.cart-item-left img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.cart-item-right {
+    flex-grow: 1;
+    margin-left: 18px;
+    margin-top: 18px;
+}
+
+.cart-item-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.qty-container input {
+    width: 50px;
+    text-align: center;
+}
+
+.qty-container p {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.qty-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.cart-remove {
+    font-size: 16px;
+    margin-bottom: 22px;
+    margin-right: 10px;
+}
+
+.total-price {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: Montserrat-Medium;
+    font-size: 20px;
+}
+
+.phone-box,
+.city-box,
+.division-box,
+.address-box {
+    width: 310px;
+    background-color: #deae68;
+    opacity: 50%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 20%;
+}
+
+.phone-input,
+.city-input,
+.division-input,
+.address-input {
+    background-color: transparent;
+    width: 100%;
+    font-size: 15px;
+    color: black;
+    border: none;
+    padding-left: 8px;
+}
+
+h2 {
+    text-align: center;
+    position: relative;
+    left: 8%;
+    bottom: 5%;
+    font-family: "Literata-Regular";
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #a26c1c;
+}
+
+.info-container label {
+    position: relative;
+    left: 20%;
+    margin-bottom: 10px;
+}
+
+.save-btn {
+    position: relative;
+    background-color: #dcb780;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 40%;
+    width: 30%;
+    font-size: 16px;
+    font-family: Montserrat-Medium;
+    margin-top: 10;
+}

@@ -96,3 +96,15 @@ span {
     font-family: Montserrat-Medium;
     margin: 30px;
 }
+
+/* Link styling */
+.inputs-col p a {
+    color: black; /* Link color */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.4s ease;
+}
+
+.inputs-col p a:hover {
+    color: #DCB780; /* Color when hovered */
+}

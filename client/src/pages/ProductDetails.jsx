@@ -4,18 +4,27 @@ import ProductInfo from '../components/product_details/productInfo';
 import './ProductDetails.css';
 import { useParams } from 'react-router-dom';
 import { CartContext } from './../components/cart_slider/CartContext';
+import axios from 'axios';
+import API_URL from '../config'
 
 const ProductDetails = () => {
+    
+
     const { id } = useParams(); // Getting the product ID from the URL
     const [product, setProduct] = useState(null);
     const { addToCart } = useContext(CartContext);
 
     useEffect(() => {
-        // Fetch product details using the ID
-        fetch(`http://localhost:3002/api/products/${id}`)
-            .then(response => response.json())
-            .then(data => setProduct(data.data.product))
-            .catch(error => console.error('Error fetching product:', error));
+        const fetchProductDetails = async () => {
+            try {
+                const response = await axios.get(`${API_URL}/api/products/${id}`);
+                setProduct(response.data.data.product); // Assuming the product is in response.data.data.product
+            } catch (error) {
+                console.error('Error fetching product:', error);
+            }
+        };
+
+        fetchProductDetails();
     }, [id]);
 
     if (!product) {
@@ -34,7 +43,11 @@ const ProductDetails = () => {
                         price={product.price}
                         description={product.description}
                         //to try the button
-                        onAddToCart={() => addToCart(product)}
+                        onAddToCart={() => {
+                            addToCart(product),
+                                 alert('Added to your cart successfully!')
+                                
+                        }}
                     />
                 </div>
             </div>
