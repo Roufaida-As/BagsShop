@@ -17,14 +17,9 @@ const LoginBody = () => {
         e.preventDefault();
         try {
             const { data } = await axios.post(`${API_URL}/api/users/login`, { email, password });
-            // Store user token in local storage or state management (like Redux)
+            // Store user token in local storage 
             localStorage.setItem("token", JSON.stringify(data.token));
-           
-            // Clear cart items for new user(not sure about this)
-            localStorage.removeItem('cartItems');
-
-            // Redirect to home or another page after successful login
-            window.location.href = "/"; // Redirect to homepage
+            window.location.href = "/"; 
         } catch (err) {
             console.log(err)
             setError("Invalid email or password");

@@ -3,9 +3,7 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    gap: 10px;
     width: 100%;
-    /* height: 100vh; */
     background: #fffcfc;
     position: relative;
     bottom: 80px;
@@ -14,6 +12,7 @@
 .items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
 }
 
 .txt {
@@ -50,7 +49,6 @@ h5 {
 }
 
 h3 {
-    /* height: 64px; */
     gap: 0px;
     opacity: 0px;
     font-family: Montserrat;

@@ -3,8 +3,8 @@ import './contactUs.css';
 
 const contact = () => {
     return (
-        <div className='contact-body'>
-            <div className="container">
+        <div className='about-body'>
+            <div className="about-container">
                 <h1>Meet us</h1>
                 <div className="col">
                     <p><strong>Phone</strong>: +213 123 456 789</p>

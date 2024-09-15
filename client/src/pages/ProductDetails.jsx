@@ -18,7 +18,7 @@ const ProductDetails = () => {
         const fetchProductDetails = async () => {
             try {
                 const response = await axios.get(`${API_URL}/api/products/${id}`);
-                setProduct(response.data.data.product); // Assuming the product is in response.data.data.product
+                setProduct(response.data.data.product); 
             } catch (error) {
                 console.error('Error fetching product:', error);
             }
@@ -42,7 +42,6 @@ const ProductDetails = () => {
                         title={product.name}
                         price={product.price}
                         description={product.description}
-                        //to try the button
                         onAddToCart={() => {
                             addToCart(product),
                                  alert('Added to your cart successfully!')

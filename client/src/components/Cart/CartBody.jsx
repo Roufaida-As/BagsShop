@@ -26,6 +26,13 @@ const CartBody = () => {
     const handleSave = async () => {
         const token = localStorage.getItem('token');
 
+        if (!token) {
+            // If no token is found, redirect to the login page
+            alert('You need to log in or register before placing an order.');
+            navigate('/login'); // You can change this to '/register' if needed
+            return;
+        }
+
         const orderData = {
             orderItems: cartItems.map(item => ({
                 product: item._id, 

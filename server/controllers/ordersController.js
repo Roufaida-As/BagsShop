@@ -51,8 +51,6 @@ exports.updateOrder = asyncHandler(async (req, res) => {
   });
 });
 
-
-//order payment
 //update order status for payment for an authorized user
 
 exports.updatePaymentStatus = asyncHandler(async (req, res) => {

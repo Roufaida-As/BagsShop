@@ -10,7 +10,7 @@ const ProductsCart = ({ id, image, name, price }) => {
                 <div className="cart">
                     <img src={`${API_URL}${image}`} alt="" />
                     <p>{name}</p>
-                    <p>{price}</p>
+                    <span>{price}</span>
 
                 </div>
             </Link>

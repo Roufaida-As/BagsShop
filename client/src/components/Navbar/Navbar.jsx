@@ -4,12 +4,22 @@ import './Navbar.css'
 import cart from "../Asserts/cart.png"
 import CartSlider from "./../cart_slider/CartSlider";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [isCartOpen, setIsCartOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('token') ? true : false); // To check if user is logged in
+    const navigate = useNavigate();
 
     const openCart = () => setIsCartOpen(true);
     const closeCart = () => setIsCartOpen(false);
+
+    const handleLogout = () => {
+        // Clear token and log out the user
+        localStorage.removeItem('token');
+        setIsLoggedIn(false);
+        navigate('/login');
+    };
 
     return (
         <div className="Navbar">
@@ -53,15 +63,25 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink
-                        to='/login'
-                        className="nav-link"
-                        style={({ isActive }) => ({
-                            color: isActive ? "#DCB780" : "black",
-                        })}
-                    >
-                        Log in
-                    </NavLink>
+                    {isLoggedIn ? (
+                        <span
+                            className="nav-link"
+                            onClick={handleLogout}
+                            style={{ cursor: 'pointer', color: "black" }}
+                        >
+                            Logout
+                        </span>
+                    ) : (
+                        <NavLink
+                            to='/login'
+                            className="nav-link"
+                            style={({ isActive }) => ({
+                                color: isActive ? "#DCB780" : "black",
+                            })}
+                        >
+                            Log in
+                        </NavLink>
+                    )}
                 </li>
             </ul>
             <div className="nav_cart" onClick={openCart}>
@@ -70,7 +90,7 @@ const Navbar = () => {
 
             <div className={`overlay ${isCartOpen ? 'visible' : ''}`} onClick={closeCart}></div>
 
-            {/* Cart Slider */}
+
             <CartSlider
                 isOpen={isCartOpen}
                 closeCart={closeCart}

@@ -44,9 +44,9 @@
     color: white;
     font-size: 18px;
     cursor: pointer;
-    width: 150px; /* Fixed width to make the button smaller */
+    width: 150px; 
     text-align: center;
-    margin: 20px auto; /* Center the button horizontally */
+    margin: 20px auto; 
     display: block;
 }
 
