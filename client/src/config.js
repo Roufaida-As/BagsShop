@@ -1,2 +1,2 @@
-const API_URL = "http://localhost:3002";
+const API_URL = "https://bag-shop-five.vercel.app/";
 export default API_URL;
