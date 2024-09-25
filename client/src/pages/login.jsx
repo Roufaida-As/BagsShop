@@ -1,5 +1,5 @@
 import React from "react";
-import LoginBody from './../components/LoginBody/LoginBody'
+import LoginBody from '../components/LoginBody/LoginBody'
 const login = () => {
     return (
         <div>
